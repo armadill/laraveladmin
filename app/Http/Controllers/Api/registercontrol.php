@@ -103,6 +103,7 @@ class registercontrol extends Controller
         'tglselesai' => '2040-10-10',
         'ket' => 'Tidak Terdaftar',
         'key' => $keydomain,
+        'face' => 'No',
         'wa' => 'on',
         'tele' => 'on',
         'lock' => 'Tidak Aktif',
