@@ -198,17 +198,29 @@ $linkbayar
 
 jika ada pertanyaan mengenai produk silahkan chat kami  😊"
   ;
-$post = ['number' => $nope, 'message' => $pesan];                                                                            
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/x-www-form-urlencoded']);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
-curl_setopt($ch, CURLOPT_URL, 'https://whatsapp.absenpegawai.com/v2/send-message');
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-$result = curl_exec($ch);
-curl_close($ch);
+ $data = [
+            'api_key' => 'faaa17688df67fb57538c3d3b7232fd6e43a5c84',
+            'sender' => '6288704690915',
+            'number' => $nope,
+            'message' => $pesan,
+        ];
+
+        $curl = curl_init();
+        curl_setopt_array(
+            $curl,
+            [
+                CURLOPT_URL =>"https://mywa.epresensi.xyz/api/send-message.php",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'POST',
+                CURLOPT_POSTFIELDS => json_encode($data), ]
+        );
+        $response = curl_exec($curl);
+        curl_close($curl);
 
 if($pesan){
 return back()->with('sukses','Berhasil mengirimkan tagihan');

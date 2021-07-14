@@ -95,8 +95,10 @@ class registercontrol extends Controller
       $simpan = Sewa::create([
         'domain' => $request->domain,
         'harga' => 0,
+        'hargax' => 0,
         'maxuser' => 30,
         'nope' =>  0,
+        'email' => 'alman.bpp@gmail.com',
         'tglmulai' => Date('Y-m-d'),
         'tglselesai' => '2040-10-10',
         'ket' => 'Tidak Terdaftar',
