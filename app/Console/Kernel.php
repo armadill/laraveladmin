@@ -26,7 +26,7 @@ class Kernel extends ConsoleKernel
     {
        
         $schedule->call('App\Http\Controllers\HomeController@kirimwa')->hourly();
-        $schedule->call('App\Http\Controllers\HomeController@cronsewa')->dailyAt('11:00');
+        $schedule->call('App\Http\Controllers\HomeController@cronsewa')->everyMinute();
        
   
     }
