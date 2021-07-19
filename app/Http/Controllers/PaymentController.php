@@ -325,7 +325,7 @@ public function anydata(){
   if($data){
      return response()->json(['status'=>true,'message'=>'data tersedai','data'=>$data]);
   }else {
-     return response()->json(['status'=>false,'message'=>'data tidak tersedia]);
+     return response()->json(['status'=>false,'message'=>'data tidak tersedia']);
   }
  
 }
