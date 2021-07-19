@@ -103,6 +103,29 @@
 </div>
 <!-- /.card -->
 </div>
+
+
+<div class="col-md-3">
+            <div class="card card-primary collapsed-card">
+              <div class="card-header">
+                <h3 class="card-title">Expandable</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+
+
 @endif
 
 </div>
@@ -167,19 +190,19 @@
    { data: 'face', name: 'face'},
    { data: 'aksi', name: 'aksi'},
    
-   
-   
+
+
    ],
    order : [[1,'DESC']]
  });
-  
+
   t.on( 'order.dt search.dt', function () {
    t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
      cell.innerHTML = i+1;
    } );
  } ).draw();
-  
-  
+
+
 });
 </script>
 <!-- untuk proses hapus  -->
@@ -213,7 +236,7 @@
    var button = $(event.relatedTarget)
    var txtid = button.data('txtid') 
    var txtnama = button.data('txtnama') 
-   
+
    var modal = $(this)
    modal.find('.modal-body #txtid').val(txtid)
    modal.find('.modal-body #txtnama').val(txtnama)
@@ -249,7 +272,7 @@
    var button = $(event.relatedTarget)
    var txtid = button.data('txtid') 
    var txtnama = button.data('txtnama') 
-   
+
    var modal = $(this)
    modal.find('.modal-body #txtid').val(txtid)
    modal.find('.modal-body #txtnama').val(txtnama)
@@ -375,7 +398,7 @@
   if($('#txtlocknya').val() == "on") {
     $( "#lock").prop('checked', true);
   }
-  
+
 
 })
 </script>
