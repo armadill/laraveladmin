@@ -45,3 +45,5 @@ Route::post('postkirimtagihan','HomeController@postkirimtagihan');
 //configapp
 Route::post('postapp','HomeController@postapp');
 
+Route::get('anydata','HomeController@anydata');
+

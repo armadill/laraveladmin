@@ -399,8 +399,14 @@ public function postapp(Request $request){
   if($simpan){
    return back()->with('sukses','Berhasil di tambahkan');
  }else {
-   return back()->with('gagal','gagal di tambahkan');
+   return back()->with('gagal','gagal
+    di tambahkan');
  }
+}
+
+public function anydata(){
+  $data  = DB::table('appconfig')->get();
+  return response()->json($data);
 }
 
 
