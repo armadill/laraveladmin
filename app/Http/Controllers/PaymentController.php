@@ -15,6 +15,7 @@ use App\Http\Controllers\Midtrans\Transaction;
 use App\Sewa;
 use App\Tokencekout;
 use Carbon\Carbon;
+use DB;
 
 class PaymentController extends Controller
 {
