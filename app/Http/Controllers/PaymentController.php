@@ -323,7 +323,7 @@ curl_close($ch);
 public function anydata($cleint){
   $data  = DB::table('appconfig')->where('client',$client)->first();
   if($data){
-     return response()->json($data));
+     return response()->json($data);
   }else {
      return response()->json(['status'=>false,'message'=>'data tidak tersedia']);
   }
