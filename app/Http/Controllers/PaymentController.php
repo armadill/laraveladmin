@@ -320,7 +320,7 @@ curl_close($ch);
         }
 
 
-public function anydata($cleint){
+public function anydata($client){
   $data  = DB::table('appconfig')->where('client',$client)->first();
   if($data){
      return response()->json($data);
