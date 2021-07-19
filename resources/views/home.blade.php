@@ -105,10 +105,10 @@
 </div>
 
 
-<div class="col-md-3">
+<div class="col-md-12">
             <div class="card card-primary collapsed-card">
               <div class="card-header">
-                <h3 class="card-title">Expandable</h3>
+                <h3 class="card-title">APP</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
@@ -118,7 +118,38 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                The body of the card
+              
+                <form action="{{url('postapp')}}" method="post">
+                  <div class="form-group container-fluid">
+                    <label>Url Splash</label>
+                    <input type="text" class="form-control" name="txtsplash">
+                  </div>
+
+                  <div class="form-group container-fluid">
+                    <label>Durasi Splash</label>
+                    <input type="text" class="form-control" name="txtdurasi">
+                  </div>
+
+                  <div class="form-group container-fluid">
+                    <label>Url Base</label>
+                    <input type="text" class="form-control" name="txtdomain">
+                  </div>
+
+
+                  <div class="form-group container-fluid">
+                    <label>Maintnance</label>
+                    <input type="text" class="form-control" name="txtmaintain">
+                  </div>
+
+                  <div class="form-group container-fluid">
+                    <label>Warna</label>
+                    <input type="text" class="form-control" name="txtwarna">
+                  </div>
+
+
+                   <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+
               </div>
               <!-- /.card-body -->
             </div>
@@ -422,4 +453,3 @@
 </script>
 @endif
 @endsection
-{"mode":"full","isActive":false}

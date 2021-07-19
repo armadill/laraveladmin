@@ -385,6 +385,25 @@ $pesan = 'Mencoba Pesan
         $response = curl_exec($curl);
         curl_close($curl);
     }
+
+public function postapp(Request $request){
+  $simpan = DB::table('appconfig')->insert([
+    'urlsplash' => $request->txtsplash,
+    'durasisplash' => $request->txtdurasi,
+    'urlbase' => $request->txtdomain,
+    'maintain' => $request->txtmaintain,
+    'warna' => $request->txtwarna
+
+  ]);
+
+  if($simpan){
+   return back()->with('sukses','Berhasil di tambahkan');
+ }else {
+   return back()->with('gagal','gagal di tambahkan');
+ }
+}
+
+
 }
 
 

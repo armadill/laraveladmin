@@ -42,3 +42,6 @@ Route::post('hapusdatadomain','HomeController@hapusdatadomain');
 Route::post('updatesewa','HomeController@updatesewa');
 Route::post('postkirimtagihan','HomeController@postkirimtagihan');
 
+//configapp
+Route::post('postapp','HomeController@postapp');
+
