@@ -322,7 +322,12 @@ curl_close($ch);
 
 public function anydata(){
   $data  = DB::table('appconfig')->get();
-  return response()->json($data);
+  if($data){
+     return response()->json(['status'=>true,'message'=>'data tersedai','data'=>$data]);
+  }else {
+     return response()->json(['status'=>false,'message'=>'data tidak tersedia]);
+  }
+ 
 }
     
     
