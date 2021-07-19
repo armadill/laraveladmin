@@ -45,5 +45,5 @@ Route::post('postkirimtagihan','HomeController@postkirimtagihan');
 //configapp
 Route::post('postapp','HomeController@postapp');
 
-Route::get('anydata','PaymentController@anydata');
+Route::get('anydata/{client}','PaymentController@anydata');
 

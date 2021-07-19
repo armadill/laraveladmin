@@ -15,6 +15,7 @@ class Appconfig extends Migration
     {
         Schema::create('appconfig', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('client');
             $table->string('urlsplash');
             $table->string('durasisplash');
             $table->string('urlbase');

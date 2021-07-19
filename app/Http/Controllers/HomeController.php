@@ -387,7 +387,9 @@ $pesan = 'Mencoba Pesan
     }
 
 public function postapp(Request $request){
+   $random = rand(111111, 999999);
   $simpan = DB::table('appconfig')->insert([
+    'client' => $random,
     'urlsplash' => $request->txtsplash,
     'durasisplash' => $request->txtdurasi,
     'urlbase' => $request->txtdomain,
@@ -404,10 +406,7 @@ public function postapp(Request $request){
  }
 }
 
-public function anydata(){
-  $data  = DB::table('appconfig')->get();
-  return response()->json($data);
-}
+
 
 
 }

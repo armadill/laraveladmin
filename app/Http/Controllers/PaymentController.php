@@ -320,10 +320,10 @@ curl_close($ch);
         }
 
 
-public function anydata(){
-  $data  = DB::table('appconfig')->get();
+public function anydata($cleint){
+  $data  = DB::table('appconfig')->where('client',$client)->first();
   if($data){
-     return response()->json(['status'=>true,'message'=>'data tersedai','data'=>$data]);
+     return response()->json($data));
   }else {
      return response()->json(['status'=>false,'message'=>'data tidak tersedia']);
   }
