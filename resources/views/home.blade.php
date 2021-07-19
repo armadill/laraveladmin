@@ -120,6 +120,7 @@
               <div class="card-body">
               
                 <form action="{{url('postapp')}}" method="post">
+                  @csrf
                   <div class="form-group container-fluid">
                     <label>Url Splash</label>
                     <input type="text" class="form-control" name="txtsplash">
