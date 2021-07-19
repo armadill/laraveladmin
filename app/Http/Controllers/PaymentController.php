@@ -317,6 +317,12 @@ curl_close($ch);
 
 
         }
+
+
+public function anydata(){
+  $data  = DB::table('appconfig')->get();
+  return response()->json($data);
+}
     
     
 
