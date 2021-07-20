@@ -391,7 +391,7 @@ public function postapp(Request $request){
   $simpan = DB::table('appconfig')->insert([
     'client' => $random,
     'status' => 'true',
-    'info' => '';
+    'info' => '',
     'urlsplash' => $request->txtsplash,
     'durasisplash' => $request->txtdurasi,
     'urlbase' => $request->txtdomain,
