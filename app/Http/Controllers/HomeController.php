@@ -31,8 +31,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-      
-        return view('home');
+        $dataapp = DB::table('configapp')->get(); 
+        return view('home',compact('dataapp'));
     }
 
      public function loadtabelsewa(){

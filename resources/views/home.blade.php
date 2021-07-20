@@ -153,7 +153,8 @@
 
                 <br>
 
-                <table>
+                <div class="table-responsive">
+                  <table class="table-striped table table-sm"  id="tabelapp">
                   <tr>
                     <th>Client</th>
                     <th>Splash</th>
@@ -163,7 +164,19 @@
                     <th>Warna</th>
                     <th></th>
                   </tr>
+
+                  @foreach ($dataapp as $data)
+                  <tr>
+                    <td>{{$data->client}}</td>
+                    <td>{{$data->urlsplash}}</td>
+                    <td>{{$data->durasisplash}}</td>
+                    <td>{{$data->urlbase}}</td>
+                    <td>{{$data->maintain}}</td>
+                    <td>{{$data->warna}}</td>
+                  </tr>
+                  @endofeach
                 </table>
+                </div>
 
               </div>
               <!-- /.card-body -->
@@ -206,6 +219,25 @@
 <!-- data table js -->
 <!-- SweetAlert2 -->
 <script src="{{url('/adminlte/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
+
+
+<script>
+ $(function() {
+  var t =   $('#tabelapp').DataTable({
+   responsive: true,
+   ScrollX: true,
+   autoWidth: false,
+   searching: true,
+   paging: true,
+   lengthChange: true,
+   ordering: true,
+   info: true,
+   processing: true,
+   serverSide: true
+});
+</script>
+
+
 <script>
  $(function() {
   var t =   $('#sewanya').DataTable({
