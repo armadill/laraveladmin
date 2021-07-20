@@ -390,6 +390,7 @@ public function postapp(Request $request){
    $random = rand(111111, 999999);
   $simpan = DB::table('appconfig')->insert([
     'client' => $random,
+    'status' => 'true',
     'urlsplash' => $request->txtsplash,
     'durasisplash' => $request->txtdurasi,
     'urlbase' => $request->txtdomain,
