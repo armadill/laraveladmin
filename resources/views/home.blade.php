@@ -162,7 +162,7 @@
                     <th>Home</th>
                     <th>Maintenance</th>
                     <th>Warna</th>
-                    <th></th>
+                    <th>Aksi</th>
                   </tr>
 
                   @foreach ($dataapp as $data)
@@ -173,6 +173,7 @@
                     <td>{{$data->urlbase}}</td>
                     <td>{{$data->maintain}}</td>
                     <td>{{$data->warna}}</td>
+                    <td><a href="#" class="btn btn-success btn-sm">Edit</a></td>
                   </tr>
                   @endforeach
                 </table>
