@@ -222,19 +222,21 @@
 
 
 <script>
- $(function() {
-  var t =   $('#tabelapp').DataTable({
-   responsive: true,
-   ScrollX: true,
-   autoWidth: false,
-   searching: true,
-   paging: true,
-   lengthChange: true,
-   ordering: true,
-   info: true,
-   processing: true,
-   serverSide: true
-});
+   $(function () {
+    var table = $("#tabelapp").DataTable({
+      "responsive": true,
+      "ScrollX": true,
+      "ScrollY": true,
+      "autoWidth": true,
+      "searching": true,
+      "paging": true,
+      "lengthChange": true,
+      "ordering": true,
+      "info": true,
+         order : [[0,'DESC']]
+    });
+   
+   });
 </script>
 
 
