@@ -31,7 +31,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $dataapp = DB::table('configapp')->get(); 
+        $dataapp = DB::table('appconfig')->get(); 
         return view('home',compact('dataapp'));
     }
 
