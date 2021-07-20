@@ -161,6 +161,7 @@
                     <th>Durasi</th>
                     <th>Home</th>
                     <th>Maintenance</th>
+                    <th>Info Maintenance</th>
                     <th>Warna</th>
                     <th>Aksi</th>
                   </tr>
@@ -172,6 +173,7 @@
                     <td>{{$data->durasisplash}}</td>
                     <td>{{$data->urlbase}}</td>
                     <td>{{$data->maintain}}</td>
+                    <td>{{$data->info}}</td>
                     <td>{{$data->warna}}</td>
                     <td><a href="#" class="btn btn-success btn-sm">Edit</a></td>
                   </tr>

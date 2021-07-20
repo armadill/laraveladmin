@@ -21,6 +21,7 @@ class Appconfig extends Migration
             $table->string('durasisplash');
             $table->string('urlbase');
             $table->string('maintain');
+            $table->string('info');
             $table->string('warna');
             $table->timestamps();
         });
