@@ -151,6 +151,20 @@
                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
 
+                <br>
+
+                <table>
+                  <tr>
+                    <th>Client</th>
+                    <th>Splash</th>
+                    <th>Durasi</th>
+                    <th>Home</th>
+                    <th>Maintenance</th>
+                    <th>Warna</th>
+                    <th></th>
+                  </tr>
+                </table>
+
               </div>
               <!-- /.card-body -->
             </div>
