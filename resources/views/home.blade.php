@@ -174,7 +174,7 @@
                     <td>{{$data->maintain}}</td>
                     <td>{{$data->warna}}</td>
                   </tr>
-                  @endofeach
+                  @endforeach
                 </table>
                 </div>
 
