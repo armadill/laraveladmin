@@ -154,7 +154,7 @@
                 <br>
 
                 <div class="table-responsive">
-                  <table class="table-striped table table-sm"  id="tabelapp">
+                   <table id="tabelapp" style="text-align: center;" class="table table-sm table-bordered table-striped">
                   <tr>
                     <th>Client</th>
                     <th>Splash</th>
