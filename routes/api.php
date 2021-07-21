@@ -18,6 +18,8 @@ Route::post('login', 'api\registercontrol@postlogin');
 
 Route::post('postdomain', 'Api\registercontrol@postdomain');
 
+Route::post('postappconfig', 'Api\registercontrol@postappconfig');
+
 Route::get('sewa', 'Api\registercontrol@getsewa');
 
 Route::get('ceksewa/{domain}', 'Api\registercontrol@ceksewa');

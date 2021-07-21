@@ -121,4 +121,28 @@ class registercontrol extends Controller
     }
     
   }
+
+
+public function postappconfig(Request $request){
+  $update = DB::table('appconfig')->where('urlbase',$request->link)->update([
+    'urlsplash' => $request->urlsp,
+    'durasisplash' => $request->durasi,
+    'maintain' => $request->maintain,
+    'info' => $request->info,
+    'warna' => $request->warna
+  ]);
+
+  if($update){
+    return response()->json([
+          'data' => 'Berhasil diupdate',
+        ], 200);
+  }
+  else {
+     return response()->json([
+        'data' => 'Gagal update',
+      ], 200);
+  }
+}
+
+
 }
