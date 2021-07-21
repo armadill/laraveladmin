@@ -325,7 +325,7 @@ public function anydata($client){
   if($data){
      return response()->json($data);
   }else {
-     return response()->json(['status'=>false,'message'=>'data tidak tersedia']);
+     return response()->json(['status'=>false,'message'=>'ID tidak di temukan, Hub Staff / Admin']);
   }
  
 }
