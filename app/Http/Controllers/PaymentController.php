@@ -201,19 +201,34 @@ Tagihan *$link*  telah di buat,
 *Link Pembyaran*
 $linkbayar
 
-jika ada pertanyaan mengenai produk silahkan chat kami  😊"
-  ;
-$post = ['number' => $nope, 'message' => $pesan];                                                                            
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/x-www-form-urlencoded']);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
-curl_setopt($ch, CURLOPT_URL, 'https://whatsapp.absenpegawai.com/v2/send-message');
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-$result = curl_exec($ch);
-curl_close($ch);
+jika ada pertanyaan mengenai produk silahkan chat kami  😊";
+                                                                          
+        $apikeywa = env('APIWA');
+        $nowa = env('WANUM');
+
+        $data = [
+            'api_key' => $apikeywa,
+            'sender' => $nowa,
+            'number' => $nope,
+            'message' => $pesan,
+        ];
+
+        $curl = curl_init();
+        curl_setopt_array(
+            $curl,
+            [
+                CURLOPT_URL => ENV('MYWA'),
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'POST',
+                CURLOPT_POSTFIELDS => json_encode($data), ]
+        );
+        $response = curl_exec($curl);
+        curl_close($curl);
 
            }
 
@@ -248,20 +263,34 @@ Lakukan Pembayaran tagihan *INV-$request->order_id*.
 untuk detail dan petunjuk serta batas pembayaran silahkan buka link sesuai nomor invoice
 
 
-jika ada pertanyaan mengenai produk silahkan chat kami  😊"
-  ;
-$post = ['number' => $datasewa->nope, 'message' => $pesan];                                                                            
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/x-www-form-urlencoded']);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
-curl_setopt($ch, CURLOPT_URL, 'https://whatsapp.absenpegawai.com/v2/send-message');
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-$result = curl_exec($ch);
-curl_close($ch);
+jika ada pertanyaan mengenai produk silahkan chat kami  😊";
 
+$apikeywa = env('APIWA');
+$nowa = env('WANUM');
+
+$data = [
+  'api_key' => $apikeywa,
+  'sender' => $nowa,
+  'number' => $datasewa->nope,
+  'message' => $pesan,
+];
+
+$curl = curl_init();
+curl_setopt_array(
+  $curl,
+  [
+    CURLOPT_URL => ENV('MYWA'),
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_POSTFIELDS => json_encode($data), ]
+  );
+$response = curl_exec($curl);
+curl_close($curl);
  }
 
  if($request->transaction_status == 'settlement'){
@@ -276,19 +305,34 @@ $pesan = "
 Pembayaran tagihan *INV-$request->order_id* telah berhasil.
 
 
-jika ada pertanyaan mengenai produk silahkan chat kami  😊"
-  ;
-$post = ['number' => $datasewa->nope, 'message' => $pesan];                                                                            
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/x-www-form-urlencoded']);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
-curl_setopt($ch, CURLOPT_URL, 'https://whatsapp.absenpegawai.com/v2/send-message');
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-$result = curl_exec($ch);
-curl_close($ch);
+jika ada pertanyaan mengenai produk silahkan chat kami  😊";
+                                                                            
+$apikeywa = env('APIWA');
+$nowa = env('WANUM');
+
+$data = [
+  'api_key' => $apikeywa,
+  'sender' => $nowa,
+  'number' => $datasewa->nope,
+  'message' => $pesan,
+];
+
+$curl = curl_init();
+curl_setopt_array(
+  $curl,
+  [
+    CURLOPT_URL => ENV('MYWA'),
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_POSTFIELDS => json_encode($data), ]
+  );
+$response = curl_exec($curl);
+curl_close($curl);
 
  }     
 
@@ -301,17 +345,32 @@ mohon untuk tidak melanjutkan pembayaran  pada no invoice di atas.
 
 jika ada pertanyaan mengenai produk silahkan chat kami  😊"
   ;
-$post = ['number' => $datasewa->nope, 'message' => $pesan];                                                                            
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/x-www-form-urlencoded']);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
-curl_setopt($ch, CURLOPT_URL, 'https://whatsapp.absenpegawai.com/v2/send-message');
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-$result = curl_exec($ch);
-curl_close($ch);
+$apikeywa = env('APIWA');
+$nowa = env('WANUM');
+
+$data = [
+  'api_key' => $apikeywa,
+  'sender' => $nowa,
+  'number' => $datasewa->nope,
+  'message' => $pesan,
+];
+
+$curl = curl_init();
+curl_setopt_array(
+  $curl,
+  [
+    CURLOPT_URL => ENV('MYWA'),
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_POSTFIELDS => json_encode($data), ]
+  );
+$response = curl_exec($curl);
+curl_close($curl);
 
  }            
        

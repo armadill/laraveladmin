@@ -196,31 +196,34 @@ Tagihan *$link*  telah di buat,
 *Link Pembyaran*
 $linkbayar
 
-jika ada pertanyaan mengenai produk silahkan chat kami  😊"
-  ;
- $data = [
-            'api_key' => 'faaa17688df67fb57538c3d3b7232fd6e43a5c84',
-            'sender' => '6288704690915',
-            'number' => $nope,
-            'message' => $pesan,
-        ];
+jika ada pertanyaan mengenai produk silahkan chat kami  😊";
 
-        $curl = curl_init();
-        curl_setopt_array(
-            $curl,
-            [
-                CURLOPT_URL =>"https://mywa.epresensi.xyz/api/send-message.php",
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => '',
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 0,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS => json_encode($data), ]
-        );
-        $response = curl_exec($curl);
-        curl_close($curl);
+$apikeywa = env('APIWA');
+$nowa = env('WANUM');
+
+$data = [
+  'api_key' => $apikeywa,
+  'sender' => $nowa,
+  'number' => $nope,
+  'message' => $pesan,
+];
+
+$curl = curl_init();
+curl_setopt_array(
+  $curl,
+  [
+    CURLOPT_URL => ENV('MYWA'),
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_POSTFIELDS => json_encode($data), ]
+  );
+$response = curl_exec($curl);
+curl_close($curl);
 
 if($pesan){
 return back()->with('sukses','Berhasil mengirimkan tagihan');
@@ -321,31 +324,33 @@ Tagihan *$link*  telah di buat,
 *Link Pembyaran*
 $linkbayar
 
-jika ada pertanyaan mengenai produk silahkan chat kami  😊"
-  ;
- $data = [
-            'api_key' => 'faaa17688df67fb57538c3d3b7232fd6e43a5c84',
-            'sender' => '6288704690915',
-            'number' => $nope,
-            'message' => $pesan,
-        ];
+jika ada pertanyaan mengenai produk silahkan chat kami  😊";
+ $apikeywa = env('APIWA');
+$nowa = env('WANUM');
 
-        $curl = curl_init();
-        curl_setopt_array(
-            $curl,
-            [
-                CURLOPT_URL =>"https://mywa.epresensi.xyz/api/send-message.php",
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => '',
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 0,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS => json_encode($data), ]
-        );
-        $response = curl_exec($curl);
-        curl_close($curl);
+$data = [
+  'api_key' => $apikeywa,
+  'sender' => $nowa,
+  'number' => $nope,
+  'message' => $pesan,
+];
+
+$curl = curl_init();
+curl_setopt_array(
+  $curl,
+  [
+    CURLOPT_URL => ENV('MYWA'),
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_POSTFIELDS => json_encode($data), ]
+  );
+$response = curl_exec($curl);
+curl_close($curl);
            }
 
             if($tanggal > $key->tglselesai){
@@ -359,31 +364,33 @@ jika ada pertanyaan mengenai produk silahkan chat kami  😊"
     }
     
     public function kirimwa(){
-$pesan = 'Mencoba Pesan
-'.date('d M Y H:i:s');
- $data = [
-            'api_key' => 'faaa17688df67fb57538c3d3b7232fd6e43a5c84',
-            'sender' => '6288704690915',
-            'number' => '62895623663095',
-            'message' => $pesan,
-        ];
+$pesan = 'Mencoba Pesan '.date('d M Y H:i:s');
+$apikeywa = env('APIWA');
+$nowa = env('WANUM');
 
-        $curl = curl_init();
-        curl_setopt_array(
-            $curl,
-            [
-                CURLOPT_URL =>"https://mywa.epresensi.xyz/api/send-message.php",
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => '',
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 0,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS => json_encode($data), ]
-        );
-        $response = curl_exec($curl);
-        curl_close($curl);
+$data = [
+  'api_key' => $apikeywa,
+  'sender' => $nowa,
+  'number' => '62895623663095',
+  'message' => $pesan,
+];
+
+$curl = curl_init();
+curl_setopt_array(
+  $curl,
+  [
+    CURLOPT_URL => ENV('MYWA'),
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_POSTFIELDS => json_encode($data), ]
+  );
+$response = curl_exec($curl);
+curl_close($curl);
     }
 
 public function postapp(Request $request){
