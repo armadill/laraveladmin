@@ -126,7 +126,7 @@ class registercontrol extends Controller
 public function postappconfig(Request $request){
   $update = DB::table('appconfig')->where('urlbase',$request->link)->update([
     'urlsplash' => $request->urlsplash,
-    'durasisplash' => $request->durasi,
+    'durasisplash' => $request->durasisplash,
     'maintain' => $request->maintain,
     'info' => $request->info,
     'warna' => $request->warna
