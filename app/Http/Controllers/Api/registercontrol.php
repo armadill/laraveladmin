@@ -146,7 +146,7 @@ public function postappconfig(Request $request){
 
 public function getlock($domain){
 $data = DB::table('appconfig')->where('urlbase',$domain)->first();
-  
+dd($data);
   if($data){
     return response()->json([
         'message' => 'data',
