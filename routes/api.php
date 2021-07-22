@@ -25,6 +25,7 @@ Route::get('sewa', 'Api\registercontrol@getsewa');
 Route::get('ceksewa/{domain}', 'Api\registercontrol@ceksewa');
  
 Route::get('ceklock/{key}', 'Api\registercontrol@ceklock');
+Route::get('getlock/{domain}', 'Api\registercontrol@getlock');
 
 
 

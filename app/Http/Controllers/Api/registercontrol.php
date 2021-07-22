@@ -144,5 +144,22 @@ public function postappconfig(Request $request){
   }
 }
 
+public function getlock($domain){
+$data = DB::table('appconfig')->where('urlbase',$domain)->first();
+  
+  if($data){
+    return response()->json([
+        'message' => 'data',
+        'pesan' => $data,
+      ], 200);
+  }else {
+    return response()->json([
+        'message' => 'data',
+        'pesan' => 'tidak tersedia',
+      ], 200);
+  }
+}
+
+
 
 }
