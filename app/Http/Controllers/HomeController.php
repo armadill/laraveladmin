@@ -399,11 +399,11 @@ public function postapp(Request $request){
     'client' => $random,
     'status' => 'true',
     'info' => '',
-    'urlsplash' => $request->txtsplash,
+    'urlsplash' => 'https://admin.absenpegawai.com/splash.png',
     'durasisplash' => $request->txtdurasi,
     'urlbase' => $request->txtdomain,
     'maintain' => $request->txtmaintain,
-    'warna' => $request->txtwarna
+    'warna' => '#AC005A'
 
   ]);
 
