@@ -417,6 +417,7 @@ public function postapp(Request $request){
 }
 
 public function postwablast(Request $request){
+  
 $sender = $request->txtsender;
 $token = $request->txttoken;
 $link = $request->txtlink;
