@@ -65,12 +65,5 @@ class Jobwablast implements ShouldQueue
         );
         $response = curl_exec($curl);
         curl_close($curl);
-
-       foreach ($this->nope as $key => $nomor) {
-          DB::table('wablast')->whereIn('nope', [$nomor])->update([
-            'status' => 'done',
-            'tgl' => date('d-m-Y')
-          ]);
-       }
     }
 }
