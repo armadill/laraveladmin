@@ -44,6 +44,10 @@ Route::post('postkirimtagihan','HomeController@postkirimtagihan');
 
 //configapp
 Route::post('postapp','HomeController@postapp');
+//wa blast
+Route::post('postwablast','HomeController@postwablast');
+
+
 
 Route::get('anydata/{client}','PaymentController@anydata');
 
