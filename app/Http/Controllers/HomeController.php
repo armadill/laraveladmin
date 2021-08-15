@@ -422,7 +422,7 @@ $sender = $request->txtsender;
 $apitoken = $request->txttoken;
 $link = $request->txtlink;
 $limit = $request->txtlimit;
-$pesan = $request->txtisiwablast;
+$isipesan = $request->txtisiwablast;
 $iterasi = $request->txtiterasi;
 
 $jam = date('H:i');
@@ -442,7 +442,7 @@ $ucapan = 'Selamat Malam';
 
 
 $pesan = "$ucapan
-$pesan
+$isipesan
 ";
 
 $cari = DB::table('wablast')->where('status','on')->limit($limit)->get();
