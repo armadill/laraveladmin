@@ -43,10 +43,10 @@ class Jobwablast implements ShouldQueue
     {
         
         $data = [
-            'api_key' => 'faaa17688df67fb57538c3d3b7232fd6e43a5c84',
-            'sender' => $sender,
-            'number' => $nope,
-            'message' => $pesan,
+            'api_key' => $this->apitoken,
+            'sender' => $this->sender,
+            'number' => $this->nope,
+            'message' => $this->pesan,
         ];
 
         $curl = curl_init();
