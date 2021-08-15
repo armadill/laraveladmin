@@ -424,6 +424,28 @@ $link = $request->txtlink;
 $limit = $request->txtlimit;
 $pesan = $request->txtisiwablast;
 $iterasi = $request->txtiterasi;
+
+$jam = date('H');
+$ucapan = '';
+if($jam >= 08 and $jam <= 10:00){
+$ucapan = 'Selamat Pagi';
+}
+if($jam >= 10:01 and $jam <= 14:00){
+$ucapan = 'Selamat Siang';
+}
+if($jam >= 14:01 and $jam <= 18:30){
+$ucapan = 'Selamat Sore';
+}
+if($jam >= 18:31 and $jam <= 21:00){
+$ucapan = 'Selamat Malam';
+}
+
+
+$pesan = "$ucapan
+
+$pesan
+";
+
 $cari = DB::table('wablast')->where('status','on')->limit($limit)->get();
         $iteration = 1;
         foreach ($cari as $key) {
