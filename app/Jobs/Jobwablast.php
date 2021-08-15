@@ -19,16 +19,16 @@ class Jobwablast implements ShouldQueue
      * @return void
      */
     protected $nope;
-    protected $token;
+    protected $apitoken;
     protected $link;
     protected $pesan;
     protected $sender;
 
 
-    public function __construct($nope,$token,$link,$pesan,$sender)
+    public function __construct($nope,$apitoken,$link,$pesan,$sender)
     {
         $this->nope = $nope;
-        $this->token = $token;
+        $this->apitoken = $apitoken;
         $this->link = $link;
         $this->pesan = $pesan;
         $this->sender = $sender;
@@ -43,7 +43,7 @@ class Jobwablast implements ShouldQueue
     {
         
         $data = [
-            'api_key' => $token,
+            'api_key' => $apitoken,
             'sender' => $sender,
             'number' => $nope,
             'message' => $pesan,

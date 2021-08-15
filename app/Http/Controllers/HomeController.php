@@ -419,7 +419,7 @@ public function postapp(Request $request){
 public function postwablast(Request $request){
 
 $sender = $request->txtsender;
-$token = $request->txttoken;
+$apitoken = $request->txttoken;
 $link = $request->txtlink;
 $limit = $request->txtlimit;
 $pesan = $request->txtisiwablast;
@@ -428,7 +428,7 @@ $cari = DB::table('wablast')->where('status','on')->limit($limit)->get();
         foreach ($cari as $key) {
             $nope = $key->nope;
             $delaySeconds = $iteration += 10;
-            $proses = Jobwablast::dispatch($nope, $token, $link, $pesan, $sender)->delay(now()->addSeconds($delaySeconds));
+            $proses = Jobwablast::dispatch($nope, $apitoken, $link, $pesan, $sender)->delay(now()->addSeconds($delaySeconds));
         }
         
         
