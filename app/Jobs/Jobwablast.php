@@ -53,7 +53,7 @@ class Jobwablast implements ShouldQueue
         curl_setopt_array(
             $curl,
             [
-                CURLOPT_URL => $link,
+                CURLOPT_URL => $this->link,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => '',
                 CURLOPT_MAXREDIRS => 10,
