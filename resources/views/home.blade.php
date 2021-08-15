@@ -197,6 +197,10 @@
                         <input type="text" class="form-control" name="txtlimit">
                      </div>
                       <div class="form-group container-fluid">
+                        <label>Iterasi per nomor / delay</label>
+                        <input type="text" class="form-control" name="txtiterasi">
+                     </div>
+                      <div class="form-group container-fluid">
                         <label>Isi Pesan</label>
                         <textarea class="form-control" name="txtisiwablast" rows="6"></textarea>
                      </div>
