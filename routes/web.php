@@ -46,6 +46,7 @@ Route::post('postkirimtagihan','HomeController@postkirimtagihan');
 Route::post('postapp','HomeController@postapp');
 //wa blast
 Route::post('postwablast','HomeController@postwablast');
+Route::get('resetonwablast','HomeController@resetonwablast');
 
 
 

@@ -206,6 +206,7 @@
                      </div>
                      <div class="form-group container-fluid">
                         <button type="submit" class="btn btn-primary">Kirim Jadwal</button>
+                        <a href="{{url('resetonwablast')}}" class="btn btn-danger">Reset</a>
                      </div>
               </form>
             </div>
