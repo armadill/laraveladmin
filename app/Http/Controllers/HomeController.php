@@ -429,8 +429,7 @@ $cari = DB::table('wablast')->where('status','on')->limit($limit)->get();
             $nope = $key->nope;
             $delaySeconds = $iteration += $limit;
             $proses = Jobwablast::dispatch($nope, $apitoken, $link, $pesan, $sender)->delay(now()->addSeconds($delaySeconds));
-
-          DB::table('wablast')->where('nope', $nope)->update([
+             DB::table('wablast')->where('nope', $nope)->update([
             'status' => 'done',
             'tgl' => date('d-m-Y')
           ]);
