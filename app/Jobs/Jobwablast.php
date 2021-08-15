@@ -25,7 +25,7 @@ class Jobwablast implements ShouldQueue
     protected $sender;
 
 
-    public function __construct($nope,$token,$link,$pesan,$sende)
+    public function __construct($nope,$token,$link,$pesan,$sender)
     {
         $this->nope = $nope;
         $this->token = $token;
@@ -41,11 +41,7 @@ class Jobwablast implements ShouldQueue
      */
     public function handle()
     {
-        $cariapikey = DB::table('modul')->where('kata', 'Apikeywa')->first();
-        $apikeywa = $cariapikey->status ?? env('APIWA');
-        $carinowa = DB::table('modul')->where('kata', 'Wanotif')->first();
-        $nowa = $carinowa->status ?? env('WANUM');
-
+        
         $data = [
             'api_key' => $token,
             'sender' => $sender,
