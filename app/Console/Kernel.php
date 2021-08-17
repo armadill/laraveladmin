@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
        
-        $schedule->call('App\Http\Controllers\HomeController@kirimwa')->hourly();
+        $schedule->call('App\Http\Controllers\HomeController@cronwablast')->everyMinute();
         $schedule->call('App\Http\Controllers\HomeController@postwablast')->hourly();
         $schedule->call('App\Http\Controllers\HomeController@cronsewa')->dailyAt('11:00');
        

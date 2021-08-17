@@ -464,6 +464,101 @@ $cari = DB::table('wablast')->where('status','on')->limit($limit)->get();
         
     
 }
+
+public function cronwablast(){
+if(date('H:i') > '07:55' and date('H:i') < '21:05'){
+$sender = '6285849070384';
+$apitoken = 'faaa17688df67fb57538c3d3b7232fd6e43a5c84';
+$link = 'https://mywa.epresensi.xyz/api/send-message.php';
+$limit = '20';
+$iterasi = '15';
+$isipesan = "  
+🤩 MEGA SALE
+Go-Digital
+E-presensi (Presensi Online) via smartphone
+
+Menyambut bulan agustus hari kemerdekaan indonesia
+absenpegawai.com DISKON 50% 
+Tanpa syarat 🤩
+*FREE TRIAL / UJI COBA*
+
+New Video Fitur
+https://youtu.be/RZsOhMp7kIc
+Chat kami lansung
+https://wa.link/f45yiv
+
+absenpegawai.com Telah dipercaya di gunakan di beberapa Sekolah,  Apotik, Pabrik, Perkantoran dan Instansi Pemerintah 
+
+FITUR
+- Anti Fake GPS (memastikan pegawai absen di kantor)
+- Android
+- WFH dan WFO
+- 4 Role akses (Admin,Staff,Pegawai,Al Departemenn)
+- Selfie dengan Face recognition / pengenalan wajah
+-  Geolocation / absen dengan jarak radius tertentu (bisa lbh dari 1 kantor)
+- Whatsapp Webhook 
+* Cek Alpa, izin, Cek status, Cek jadwal dll lansung dari whatsapp yang bisa di gunakan oleh seluruh karyawan maupun admin
+- Full Notifikasi Whatsapp (semua notif akan di krm ke whatsapp/pengingat)
+- Telegram Chanel (Semua aktifitas presensi mulai dari absen masuk dll akan di krm ke telegram)
+- ID card (bisa juga absen lewat ID card)
+- Jam shift
+- Beragam jenis kegiatan yg bisa di sesuaikan dengan kebutuhan kantor
+- Laporan data yang lengkap bisa di export ke PDF dan Excell
+- Pengajuan semua jenis izin sakit.dinas dll (lengkap dengan upload surat ket sakit)
+- Masih banyk fitur lain 
+
+Info lengkap silahkan kunjugi
+http://absenpegawai.com
+
+dapatkan promo nya
+https://wa.link/f45yiv
+
+Quota Terbatas
+";
+$jam = date('H:i');
+$ucapan = '';
+if($jam >= '08:00' and $jam <= '10:00'){
+$ucapan = 'Selamat Pagi';
+}
+if($jam >= '10:01' and $jam <= '14:00'){
+$ucapan = 'Selamat Siang';
+}
+if($jam >= '14:01' and $jam <= '18:30'){
+$ucapan = 'Selamat Sore';
+}
+if($jam >= '18:31' and $jam <= '21:00'){
+$ucapan = 'Selamat Malam';
+}
+
+
+$pesan = "$ucapan
+$isipesan
+";
+
+$cari = DB::table('wablast')->where('status','on')->limit($limit)->get();
+        $iteration = 1;
+        foreach ($cari as $key) {
+            $nope = $key->nope;
+            $delaySeconds = $iteration += $iterasi;
+            $proses = Jobwablast::dispatch($nope, $apitoken, $link, $pesan, $sender)->delay(now()->addSeconds($delaySeconds));
+             $update = DB::table('wablast')->where('nope', $nope)->update([
+            'status' => 'done',
+            'tgl' => date('d-m-Y')
+          ]);
+
+             if($update){
+               return back()->with('sukses','Berhasil di jalanjan');
+             }
+       
+        }
+        
+} else {
+
+}
+    
+}
+
+
 public function resetonwablast(){
  $reset = DB::table('wablast')->where('status','done')->update([
   'status' => 'on'
