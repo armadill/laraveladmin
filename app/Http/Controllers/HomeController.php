@@ -473,47 +473,46 @@ $link = 'https://mywa.epresensi.xyz/api/send-message.php';
 $limit = '20';
 $iterasi = '15';
 $isipesan = "  
-🤩 MEGA SALE
 Go-Digital
 E-presensi (Presensi Online) via smartphone
 
 Menyambut bulan agustus hari kemerdekaan indonesia
 absenpegawai.com *DISKON 50%* 
 Tanpa syarat 🤩
-*FREE TRIAL / UJI COBA*
+*Free trial/uji coba*
 
 New Video Fitur
 https://youtu.be/RZsOhMp7kIc
 Chat kami lansung
 https://wa.link/f45yiv
 
-absenpegawai.com Telah dipercaya di gunakan di beberapa Sekolah,  Apotik, Pabrik, Perkantoran dan Instansi Pemerintah 
+*absenpegawai.com* Telah dipercaya di gunakan di beberapa Sekolah,  Apotik, Pabrik, Perkantoran dan Instansi Pemerintah 
 
-FITUR
-- Anti Fake GPS (memastikan pegawai absen di kantor)
-- Android
-- WFH dan WFO
-- 4 Role akses (Admin,Staff,Pegawai,Al Departemenn)
-- Selfie dengan Face recognition / pengenalan wajah
--  Geolocation / absen dengan jarak radius tertentu (bisa lbh dari 1 kantor)
-- Whatsapp Webhook 
+*FITUR*
+*- Anti Fake GPS* (memastikan pegawai absen di kantor)
+*- Android*
+*- WFH dan WFO*
+*- 4 Role* akses (Admin,Staff,Pegawai,Al Departemenn)
+*- Selfie* dengan Face recognition / pengenalan wajah
+*-  Geolocation* / absen dengan jarak radius tertentu (bisa lbh dari 1 kantor)
+*- Whatsapp Webhook* 
 * Cek Alpa, izin, Cek status, Cek jadwal dll lansung dari whatsapp yang bisa di gunakan oleh seluruh karyawan maupun admin
-- Full Notifikasi Whatsapp (semua notif akan di krm ke whatsapp/pengingat)
-- Telegram Chanel (Semua aktifitas presensi mulai dari absen masuk dll akan di krm ke telegram)
-- ID card (bisa juga absen lewat ID card)
-- Jam shift
-- Beragam jenis kegiatan yg bisa di sesuaikan dengan kebutuhan kantor
-- Laporan data yang lengkap bisa di export ke PDF dan Excell
-- Pengajuan semua jenis izin sakit.dinas dll (lengkap dengan upload surat ket sakit)
-- Masih banyk fitur lain 
+*- Full Notifikasi Whatsapp* (semua notif akan di krm ke whatsapp/pengingat)
+*- Telegram Chanel* (Semua aktifitas presensi mulai dari absen masuk dll akan di krm ke telegram)
+*- ID card* (bisa juga absen lewat ID card)
+*- Jam shift*
+*- Beragam jenis kegiatan* yg bisa di sesuaikan dengan kebutuhan kantor
+*- Laporan* data yang lengkap bisa di export ke PDF dan Excell
+*- Pengajuan* semua jenis izin sakit.dinas dll (lengkap dengan upload surat ket sakit)
+*- Masih banyk fitur lain* 
 
 Info lengkap silahkan kunjugi
 http://absenpegawai.com
 
-dapatkan promo nya
+*dapatkan promo nya*
 https://wa.link/f45yiv
 
-Quota Terbatas
+_Quota Terbatas_
 ";
 $jam = date('H:i');
 $ucapan = '';
