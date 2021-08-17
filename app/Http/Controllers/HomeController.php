@@ -478,7 +478,7 @@ Go-Digital
 E-presensi (Presensi Online) via smartphone
 
 Menyambut bulan agustus hari kemerdekaan indonesia
-absenpegawai.com DISKON 50% 
+absenpegawai.com *DISKON 50%* 
 Tanpa syarat 🤩
 *FREE TRIAL / UJI COBA*
 
